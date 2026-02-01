@@ -118,7 +118,7 @@
                                 color: #222222;
                               "
                             >
-                              Welcome to CyberPH {{ first_name }}!
+                              Hello {{ first_name }}!
                             </p>
                             <p
                               style="
@@ -139,10 +139,8 @@
                                 color: #222222;
                               "
                             >
-                              We are excited to have you with us. Your
-                              experience, energy, and willingness to learn will
-                              help strengthen a community that values curiosity,
-                              collaboration, and real-world impact.
+                              As <strong>{{ position }}</strong>, your role is
+                              {{ role_description }}.
                             </p>
                             <p
                               style="
@@ -197,8 +195,7 @@
                                     padding: 4px 0;
                                   "
                                 >
-                                  • Watch for your onboarding message and
-                                  initial task details from your lead.
+                                  • Watch for your onboarding message for access to your division/s accounts.
                                 </td>
                               </tr>
                             </table>
@@ -236,8 +233,17 @@
                                   <div style="margin-bottom: 6px">
                                     <strong>Webmail:</strong> {{ webmail }}
                                   </div>
-                                  <div>
+                                  <div style="margin-bottom: 6px">
                                     <strong>Password:</strong> {{ password }}
+                                  </div>
+                                  <div style="margin-bottom: 6px">
+                                    <strong>Portal:</strong>
+                                    <a
+                                      href="https://mail.cyberph.org/"
+                                      target="_blank"
+                                      style="color: #2b2b2b; text-decoration: underline"
+                                      >https://mail.cyberph.org</a
+                                    >
                                   </div>
                                 </td>
                               </tr>
