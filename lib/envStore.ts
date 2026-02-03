@@ -7,6 +7,7 @@ export type SenderEnv = {
   SENDER_NAME?: string;
   HOST_DOMAIN?: string;
   PORT?: string;
+  PORT_ALT?: string;
 };
 
 // In-memory multi-profile store
@@ -85,6 +86,7 @@ export function getEnvForVariant(variant: SystemVariant): SenderEnv {
       SENDER_NAME: env.CYBERPH_SENDER_NAME,
       HOST_DOMAIN: env.CYBERPH_HOST_DOMAIN,
       PORT: env.CYBERPH_PORT,
+      PORT_ALT: env.CYBERPH_PORT_ALT,
     };
   }
   // default
