@@ -1,12 +1,10 @@
 import { NextRequest, NextResponse } from "next/server";
 import { AUTH_COOKIE } from "@/lib/auth";
 
-const PUBLIC_PATH_PREFIXES = ["/_next", "/api/", "/templates", "/images", "/fonts"];
+const PUBLIC_PATH_PREFIXES = ["/_next", "/templates", "/images", "/fonts"];
 const PUBLIC_PATHS = new Set([
   "/login",
   "/favicon.ico",
-  "/api/auth/login",
-  "/api/auth/logout",
 ]);
 
 const STATIC_EXT = /\.(png|jpg|jpeg|gif|svg|webp|ico|txt|json|xml|css|js|map)$/i;
@@ -29,7 +27,7 @@ function isHtmlRequest(req: NextRequest) {
   if (accept.includes("text/html")) return true;
   const pathname = req.nextUrl.pathname;
   const hasExt = /\.[a-zA-Z0-9]+$/.test(pathname);
-  return !hasExt && !pathname.startsWith("/api/");
+  return !hasExt;
 }
 
 export function middleware(req: NextRequest) {
